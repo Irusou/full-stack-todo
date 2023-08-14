@@ -11,7 +11,7 @@ const createTask = async (task) => {
 	const query = "INSERT INTO tasks(title, status, created_at) VALUES(?,?,?)";
 	const [createdTask] = await connection.execute(query, [
 		title,
-		"pendente",
+		"waiting",
 		dateUTC,
 	]);
 
